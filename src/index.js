@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AppProvider } from './AppContext';
+import emailjs from 'emailjs-com';
+
+// Initialize EmailJS with your User ID
+emailjs.init('vdkHo-dCb992N1dM8'); // Replace with your actual EmailJS User ID
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+        <AppProvider>
+        <App />
+        </AppProvider>
+   
   </React.StrictMode>
 );
 
